@@ -2,7 +2,7 @@ let config = {
     type: Phaser.AUTO,
     width: 720, 
     height: 480, 
-    scene: [Start, Play]
+    scene: [Menu, Play]
     // the above line gives error message scene not defined
 }
 
