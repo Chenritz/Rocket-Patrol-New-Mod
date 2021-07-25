@@ -7,9 +7,12 @@ class Play extends Phaser.Scene {
         //load images/title sprites
         this.load.image('rocket', './assets/RocketNewEvenSmaller.png');
         this.load.image('spaceship', './assets/SpaceshipSmaller.png');
-        this.load.image('starfield', './assets/starfield.png');
+        this.load.image('starfield', './assets/NewStarfield.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+        // load Game Over Page
+        // below line for implementing a game over screen
+        // this.load.image('Game Over', './assets/GameOver.png');
 }
 
     create() {
@@ -45,8 +48,8 @@ class Play extends Phaser.Scene {
         let scoreConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
+            backgroundColor: '#8E8E8E',
+            color: '#000000',
             align: 'right',
             padding: {
                 top: 5,
@@ -61,6 +64,8 @@ class Play extends Phaser.Scene {
         // 60-second play clock
         scoreConfig.fixedWidth = 0;
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
+            // below line for implementing a game over screen
+            // this.load.image('Game Over', './assets/GameOver.png');
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or <- for Menu', scoreConfig).setOrigin(0.5);
             this.gameOver = true;
