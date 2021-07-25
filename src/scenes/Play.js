@@ -5,9 +5,9 @@ class Play extends Phaser.Scene {
 // Everywhere where 'Spaceship has been mentioned is commented out until I can fix the errors.
     preload() {
         //load images/title sprites
-        this.load.image('rocket', './assets/RocketNewEvenSmaller.png');
-        this.load.image('spaceship', './assets/SpaceshipSmaller.png');
-        this.load.image('starfield', './assets/NewStarfield.png');
+        this.load.image('rocket', './assets/Rocket.png');
+        this.load.image('spaceship', './assets/Spaceship.png');
+        this.load.image('starfield', './assets/Starfield.png');
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
         // load Game Over Page

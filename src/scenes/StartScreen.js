@@ -9,12 +9,12 @@ class Start extends Phaser.Scene {
         this.load.audio('sfx_explosion', './assets/assets_explosion38.wav');
         this.load.audio('sfx_rocket', './assets/assets_rocket_shot.wav');
         // load Start Screen
-        this.load.image('TitleScreenNewer', 'assets/TitleScreenNewer.png');
+        this.load.image('Menu', 'assets/Menu.png');
     }
     
     create() {
         // my menu screen
-        this.startScreen = this.add.sprite(360, 250, 'TitleScreenNewer');
+        this.startScreen = this.add.sprite(360, 250, 'Menu');
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
